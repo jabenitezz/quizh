@@ -5,7 +5,7 @@ exports.loginRequired = function(req, res, next){
     //var moment = require('moment');
 
     var now1 = moment();
-        console.log('------------------Tiempo actual ' + know1);
+        console.log('------------------Tiempo actual ' + now1);
     if (req.session.user) {
       //  console.log('++++++++++++++++++++++Tiempo actual ' + now);
         next();
@@ -29,7 +29,7 @@ exports.timeout = function(req, res, next){
         console.log('--------Variable time creada . fecha2 valor: ' + fecha2);
         console.log('--------Diferencia en segundos: ' + know1.diff(fecha2, 'seconds') );
         if (know1.diff(fecha2, 'seconds') > 120){
-          res.redirect('/logout'); 
+          res.redirect('/logout');
           return;
         }
     }
@@ -62,7 +62,7 @@ exports.create = function(req, res) {
 
         if (error) {  // si hay error retornamos mensajes de error de sesión
             req.session.errors = [{"message": 'Se ha producido un error: '+error}];
-            res.redirect("/login");        
+            res.redirect("/login");
             return;
         }
 
@@ -74,7 +74,7 @@ exports.create = function(req, res) {
     });
 };
 
-// DELETE /logout   -- Destruir sesion 
+// DELETE /logout   -- Destruir sesion
 exports.destroy = function(req, res) {
     delete req.session.user;
     res.redirect(req.session.redir.toString()); // redirect a path anterior a login
