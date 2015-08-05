@@ -65,7 +65,11 @@ exports.index = function(req, res) {
       console.log("Total de comentarios: " + count + " ")
     });
    var vv=comentariosporpreguntas();
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> ff2aac8dff2186435213caf5dafd9cb98305449a
     console.log("Total buscarComentariosporpreguntas: " + vv + " ");
 
 
@@ -73,6 +77,7 @@ exports.index = function(req, res) {
       console.log("Total de preguntas sin comentarios: " + count + " ")
     });
 
+<<<<<<< HEAD
 
     buscarPreguntasComentarios().then(function(count) {
       console.log("Total de preguntas con comentarios: " + count + " ")
@@ -80,6 +85,15 @@ exports.index = function(req, res) {
 
 
 
+=======
+   
+    buscarPreguntasComentarios().then(function(count) {
+      console.log("Total de preguntas con comentarios: " + count + " ")
+    });
+ 
+    
+    
+>>>>>>> ff2aac8dff2186435213caf5dafd9cb98305449a
 
 
 
@@ -87,6 +101,7 @@ exports.index = function(req, res) {
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -113,3 +128,5 @@ console.log("valores finally: " + estadisticas.preguntas + ":" + estadisticas.co
 //res.render('quizes/statistics.ejs', {estadisticas: estadisticas, errors: []
 //});
 });
+=======
+>>>>>>> ff2aac8dff2186435213caf5dafd9cb98305449a
